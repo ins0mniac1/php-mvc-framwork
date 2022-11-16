@@ -1,5 +1,5 @@
 <p>
-    <h1>Tiny PHP MVC Framework</h1>
+    <h1>Tiny PHP 8 MVC Framework</h1>
 </p>
 
 
@@ -100,7 +100,7 @@ router()->get('/', 'home'); (will return view file with name home.inso.php in Re
 
 ### Views
 All views are in Resources/views/ folder and are with extension .inso.php (Why not?)
-Every view file extend Resources/app.inso.php file as replace {{content}} with view file content
+Every view file extend Resources/views/lauouts/main.inso.php file as replace {{content}} with view file content
 
 You can set custom title for every view file (as is shown in Resources/views/auth/profile.inso.php) with:
 
