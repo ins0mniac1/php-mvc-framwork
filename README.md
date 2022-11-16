@@ -15,7 +15,7 @@ Everything else is written from scratch!
 
 ## Features
 
-- PHP >= v8.0 are supported;
+- PHP >= v8.0 is supported;
 - Work with MySQL db;
 - Easy setup, no additional configuration;
 - Easy to use.
@@ -79,6 +79,18 @@ If you want to insert data in db table, you must:
 
 1. Load data for the given model with $model->loadData($data), where $model is instance of Model, $data is the data that you want to insert;
 2. Call $model->create() method, which can return 'true' if inserting is successful or PDO exception message if inserting is not successful.
+
+Every Model can override protected static array $hidden = [] and this will restrict loading values for the given column in db.
+
+Example: If we add 'password' field in User model:
+
+```bash
+protected static array $hidden = [
+        'password'
+    ];
+```
+
+data from password column in users table can not be shown!
 
 
 > **NOTE :** The migrations are not automatically created. You must create migration file (examples are in database/migrations) and every migration file must begin with m00XXX_name_of_class  and must be class extends database/Migration.php
@@ -242,6 +254,22 @@ isAuth()
 Dump and die - show dumped data
 ```bash
 dd(...$data)
+```
+
+Example: In index() method in LoginController can be called as:
+```bash
+dd($this, 'from index');
+```
+
+And will return:
+
+```bash
+object(App\Http\Controllers\Auth\LoginController)#36 (1) {
+  ["registeredMiddlewares":"App\Http\Controllers\Controller":private]=>
+  array(0) {
+  }
+}
+string(10) "from index"
 ```
 
 
