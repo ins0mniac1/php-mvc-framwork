@@ -1,0 +1,10 @@
+<?php
+
+namespace App\Http\Controllers\^^ControllerFolder^^;
+
+use App\Core\Request;
+
+class ^^Controller^^ extends Controller
+{
+    //
+}

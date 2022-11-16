@@ -1,0 +1,23 @@
+<?php
+
+namespace App\database\seeders^^SeederFolder^^;
+
+use App\database\Seeder;
+use App\Models^^ModelNamespace^^;
+
+class ^^Seeder^^ extends Seeder
+{
+    const ^^MODEL_CONSTANT^^ = [
+        //
+    ];
+
+    public function __construct()
+    {
+        $this->model = ^^ModelClass^^;
+    }
+
+    public function seed()
+    {
+        //
+    }
+}

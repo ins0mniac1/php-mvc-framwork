@@ -1,0 +1,10 @@
+<?php
+
+namespace App\Models^^ModelFolder^^;
+
+use App\Core\Model;
+
+class ^^Model^^ extends Model
+{
+    public ?int $id = null;
+}
